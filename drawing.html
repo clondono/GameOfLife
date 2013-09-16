@@ -8,16 +8,40 @@
 </head>
 
 <body>
-
 <!--
 define the HTML canvas element that will hold the graphical output
 -->
-<canvas id="canvas"></canvas>
+<table>
+	<tr>
+		<td>
+			<button id="start">
+				Start
+			</button>
+			<button id="stop" disabled="true">
+				Stop
+			</button>
+			<select id="choice">
+				<option value="alternate">alternate</option>
+			    <option value="cross">cross</option>
+			    <option value="x">x</option>
+			    <option value="glider">glider</option>
+			</select>
+			<button id="reset">
+				Reset
+			</button>
+		</td>
 
+		<td>
+		<canvas id="canvas"></canvas>
+		</td>
+	</tr>
+
+
+</table>
 <!--
 execute the JavaScript
 -->
-<script src="basic_drawing.js"></script>
+<script src="proj1.js"></script>
 
 </body>
 </html>
