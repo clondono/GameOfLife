@@ -1,48 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" type="text/css" href="main.css">
     <script src="graphics.js"></script>
-    <style>
-    canvas {position: absolute; left: 100px; top: 100px; height:400px; width:400px}
-    </style>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 </head>
 
 <body>
 <!--
 define the HTML canvas element that will hold the graphical output
 -->
-<table>
-	<tr>
-		<td>
-			<button id="start">
-				Start
-			</button>
-			<button id="stop" disabled="true">
-				Stop
-			</button>
-			<select id="choice">
-				<option value="alternate">alternate</option>
-			    <option value="cross">cross</option>
-			    <option value="x">x</option>
-			    <option value="glider">glider</option>
-			</select>
-			<button id="reset">
-				Reset
-			</button>
-		</td>
-
-		<td>
-			<div id="canvas_container">
-			    <canvas id="canvas"></canvas>
-			</div>		
-		</td>
-	</tr>
+	
+	<h1>Conway's Game of Life</h1>
+	<p>Click on a square to either kill it or bring it to life.</p>
+	
+	<div id="buttonContainer">
+		<button id="start">
+			Start
+		</button>
+		<button id="stop" disabled="true">
+			Stop
+		</button>
+		<select id="choice">
+		    <option value="clear">clear</option>
+			<option value="alternate">alternate</option>
+		    <option value="cross">cross</option>
+		    <option value="x">x</option>
+		    <option value="glider">glider</option>
+		    <option value="blackout">blackout</option>
 
 
-</table>
+		</select>
+		<button id="reset">
+			Set Pattern
+		</button>
+	</div>
+	
+	<div id = "board" style="position: absolute; left: 100px; top: 130px; height:400px; width:400px">
+	</div>
+
+
 <!--
 execute the JavaScript
 -->
+<script src="Util.js"></script>
+<script src="Game.js"></script>
 <script src="proj1.js"></script>
 
 </body>

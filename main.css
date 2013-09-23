@@ -1,0 +1,32 @@
+.cell {
+	border-width:1px;
+	border-style: solid;
+	border-color:black;
+	position:absolute;
+	padding:0px;
+}
+#board {
+	border-width:1px;
+	border-style: solid;
+	border-color:black;
+	padding:0px;
+}
+
+#buttonContainer {
+	position:absolute;
+	top:100px;
+	left:200px;
+}
+#headerDiv {
+	position:absolute;
+	top:15px;
+	left:200px;
+}
+
+.alive {
+	background-color: #34B1E3;
+}
+
+.dead {
+	background-color: transparent;
+}
