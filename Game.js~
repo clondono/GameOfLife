@@ -53,7 +53,7 @@ Board = function(size, divContain) {
 			});
 		});
 
-
+		*/n = n- that._board[row][col];
 
 		return n;
 	}
