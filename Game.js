@@ -52,7 +52,8 @@ Board = function(size, divContain) {
 				}	
 			});
 		});
-		if(this.isAlive(Coord(row,col))){
+		
+		if(this.isAlive(Coord(row,col))) {
 			n=n-1;
 		}
 
