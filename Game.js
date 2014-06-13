@@ -52,7 +52,9 @@ Board = function(size, divContain) {
 				}	
 			});
 		});
-
+		if(this.isAlive(Coord(row,col))){
+			n=n-1;
+		}
 
 
 		return n;
@@ -155,7 +157,12 @@ Board = function(size, divContain) {
 			from_to(0,that._dimen,function(x) {
 				from_to(0,that._dimen,function(y) {
 					var liveAdj = that.getLiveNeighbors(Coord(x,y));
+					if(isAlive(Coord(x,y))) {
+						console.log(liveAdj);
+						console.log("(",x,",",y,") has ", liveAdj,"neighbors");
+					}
 					nextBoard[x][y] = that.getNextState(that._board[x][y],liveAdj);
+
 				});
 			});
 			that.updateBoard(nextBoard);
